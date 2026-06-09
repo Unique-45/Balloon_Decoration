@@ -1,0 +1,475 @@
+/* ============================================
+   BRAND_NAME_HERE — Animations & Keyframes
+   Task 1C: Animations CSS
+   ============================================ */
+
+
+/* ─────────────────────────────────────────────
+   1. @keyframes fadeUp
+   Scroll-reveal: opacity 0 + translateY → visible
+   ───────────────────────────────────────────── */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade down variant */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in (no translate) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   2. @keyframes slideInLeft
+   Mobile menu slide-in from left
+   ───────────────────────────────────────────── */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Reverse — slide out */
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* Slide in from right (nav links stagger) */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   3. @keyframes pulse
+   WhatsApp floating button pulse ring
+   ───────────────────────────────────────────── */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Pink pulse variant — for CTA buttons */
+@keyframes pulsePink {
+  0% {
+    box-shadow: 0 0 0 0 rgba(233, 30, 140, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(233, 30, 140, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(233, 30, 140, 0);
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   4. @keyframes shimmer
+   Skeleton loading shimmer sweep
+   ───────────────────────────────────────────── */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   5. @keyframes bounce
+   Scroll-down indicator arrow
+   ───────────────────────────────────────────── */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Gentle float — for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   6. @keyframes scaleIn
+   Modal / Lightbox open effect
+   ───────────────────────────────────────────── */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Reverse — modal close */
+@keyframes scaleOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+/* Backdrop fade */
+@keyframes backdropIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   7. BONUS KEYFRAMES
+   ───────────────────────────────────────────── */
+
+/* Spin — for loading spinners */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Wiggle — attention-grab for badges / icons */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(6deg);
+  }
+  30% {
+    transform: rotate(-6deg);
+  }
+  45% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+}
+
+/* Gradient shift — hero background accent */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   8. SKELETON LOADER
+   Grey shimmer block shown while content loads
+   ───────────────────────────────────────────── */
+
+/* Base skeleton shimmer block */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #EEEEF2;
+  border-radius: var(--radius-sm, 8px);
+  /* No text / children visible */
+  color: transparent !important;
+  pointer-events: none;
+  user-select: none;
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #EEEEF2 0%,
+    #F8F8FA 40%,
+    #EEEEF2 80%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+/* Skeleton text line */
+.skeleton-text {
+  height: 14px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.skeleton-text:last-child {
+  width: 65%;
+}
+
+/* Skeleton heading */
+.skeleton-heading {
+  height: 22px;
+  width: 50%;
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+/* Skeleton card — full card placeholder */
+.skeleton-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--white, #FFFFFF);
+  border-radius: var(--radius, 12px);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(233, 30, 140, 0.06));
+  padding: 0;
+}
+
+/* Card image area */
+.skeleton-card .skeleton-img {
+  width: 100%;
+  height: 200px;
+  background: #EEEEF2;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-card .skeleton-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #EEEEF2 0%,
+    #F8F8FA 40%,
+    #EEEEF2 80%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+/* Card body area */
+.skeleton-card .skeleton-body {
+  padding: 20px;
+}
+
+.skeleton-card .skeleton-body .skeleton-text {
+  background: #EEEEF2;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-card .skeleton-body .skeleton-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #EEEEF2 0%,
+    #F8F8FA 40%,
+    #EEEEF2 80%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+/* Skeleton circle — avatar / icon placeholder */
+.skeleton-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* Skeleton badge — small pill placeholder */
+.skeleton-badge {
+  height: 24px;
+  width: 80px;
+  border-radius: 9999px;
+}
+
+/* Skeleton button */
+.skeleton-btn {
+  height: 44px;
+  width: 140px;
+  border-radius: var(--radius-sm, 8px);
+}
+
+
+/* ─────────────────────────────────────────────
+   9. ANIMATION UTILITY CLASSES
+   Apply directly to elements for quick animation
+   ───────────────────────────────────────────── */
+
+.anim-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.anim-fade-down {
+  animation: fadeDown 0.6s ease forwards;
+}
+
+.anim-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.anim-slide-in-left {
+  animation: slideInLeft 0.4s ease forwards;
+}
+
+.anim-slide-in-right {
+  animation: slideInRight 0.4s ease forwards;
+}
+
+.anim-scale-in {
+  animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.anim-bounce {
+  animation: bounce 2s ease infinite;
+}
+
+.anim-pulse {
+  animation: pulse 2s ease infinite;
+}
+
+.anim-pulse-pink {
+  animation: pulsePink 2s ease infinite;
+}
+
+.anim-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.anim-wiggle {
+  animation: wiggle 0.6s ease;
+}
+
+.anim-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Stagger delays for utility classes */
+.anim-delay-100 { animation-delay: 0.1s; }
+.anim-delay-200 { animation-delay: 0.2s; }
+.anim-delay-300 { animation-delay: 0.3s; }
+.anim-delay-400 { animation-delay: 0.4s; }
+.anim-delay-500 { animation-delay: 0.5s; }
+.anim-delay-600 { animation-delay: 0.6s; }
+.anim-delay-700 { animation-delay: 0.7s; }
+.anim-delay-800 { animation-delay: 0.8s; }
+
+
+/* ─────────────────────────────────────────────
+   10. REDUCED MOTION
+   Respect user's system preference
+   ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after,
+  .skeleton-card .skeleton-img::after,
+  .skeleton-card .skeleton-body .skeleton-text::after {
+    animation: none;
+  }
+
+  .anim-fade-up,
+  .anim-fade-down,
+  .anim-fade-in,
+  .anim-slide-in-left,
+  .anim-slide-in-right,
+  .anim-scale-in,
+  .anim-bounce,
+  .anim-pulse,
+  .anim-pulse-pink,
+  .anim-float,
+  .anim-wiggle,
+  .anim-spin {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
