@@ -3265,3 +3265,38 @@ small {
     content: none;
   }
 }
+
+
+/* Mobile Dropdown Menu Styles */
+.mobile-has-dropdown > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-dropdown-icon {
+  transition: transform 0.3s ease;
+}
+.mobile-has-dropdown.open .mobile-dropdown-icon {
+  transform: rotate(180deg);
+}
+.mobile-dropdown-menu {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.mobile-has-dropdown.open .mobile-dropdown-menu {
+  display: block;
+  animation: fadeIn 0.3s ease forwards;
+}
+.mobile-dropdown-menu li {
+  margin-bottom: 12px;
+}
+.mobile-dropdown-menu li:last-child {
+  margin-bottom: 0;
+}
+.mobile-dropdown-menu a {
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+}

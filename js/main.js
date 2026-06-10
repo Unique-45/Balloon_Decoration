@@ -715,3 +715,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log(`[${CONFIG.brand}] All modules loaded ✓`);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle mobile dropdowns
+    const dropdownToggles = document.querySelectorAll('.mobile-has-dropdown > a');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parentLi = this.parentElement;
+        
+        // Close others
+        document.querySelectorAll('.mobile-has-dropdown').forEach(item => {
+          if (item !== parentLi) {
+            item.classList.remove('open');
+          }
+        });
+        
+        // Toggle current
+        parentLi.classList.toggle('open');
+      });
+    });
+});
