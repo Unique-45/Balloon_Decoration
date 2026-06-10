@@ -646,6 +646,35 @@ function initContactForm() {
 
 
 /* ═══════════════════════════════════════════════
+   10. MOBILE MENU
+   Handle opening and closing the mobile drawer
+   ═══════════════════════════════════════════════ */
+function initMobileMenu() {
+  const burger = document.getElementById('header-burger');
+  const menu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('mobile-menu-overlay');
+
+  if (!burger || !menu || !overlay) return;
+
+  function openMenu() {
+    menu.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  burger.addEventListener('click', openMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  console.log('[init] Mobile Menu ready ✓');
+}
+
+/* ═══════════════════════════════════════════════
    BOOT — DOMContentLoaded
    Initialize all modules in order
    ═══════════════════════════════════════════════ */
@@ -668,6 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyBar();
   initScrollReveal();
   initScrollSpy();
+  initMobileMenu();
 
   // Interactive modules
   initCategoryFilter();
