@@ -1,6 +1,6 @@
 # 🎈 Balloon Decoration Website
 
-A stunning, fully responsive **balloon decoration business website** built with pure HTML, CSS, and JavaScript. Designed with a clean Indian e-commerce aesthetic inspired by [7eventzz.com](https://7eventzz.com) and [balloondekor.com](https://balloondekor.com).
+A stunning, fully responsive **balloon decoration business website** built with pure HTML, CSS, and JavaScript. 
 
 > **No frameworks. No dependencies. Just open `index.html` and go.**
 

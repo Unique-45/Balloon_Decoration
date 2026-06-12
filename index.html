@@ -1,5 +1,7 @@
+<!-- TASK 9 COMPLETE: Homepage cleaned, category icons linked to dedicated pages -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +10,10 @@
   <!-- SEO Meta -->
   <!-- CLIENT REPLACE: Update brand name, city, and tagline below -->
   <title>Balloon Decoration in CITY_HERE | BRAND_NAME_HERE</title>
-  <meta name="description" content="BRAND_NAME_HERE offers premium balloon decoration in CITY_HERE . Same-day setup for birthdays, weddings, baby showers & corporate events. Book via WhatsApp!">
-  <meta name="keywords" content="balloon decoration CITY_HERE, birthday balloon decoration, wedding balloon decor, baby shower balloons, corporate event decoration, balloon arch, balloon garland, party decoration CITY_HERE, same day balloon decoration">
+  <meta name="description"
+    content="BRAND_NAME_HERE offers premium balloon decoration in CITY_HERE . Same-day setup for birthdays, weddings, baby showers & corporate events. Book via WhatsApp!">
+  <meta name="keywords"
+    content="balloon decoration CITY_HERE, birthday balloon decoration, wedding balloon decor, baby shower balloons, corporate event decoration, balloon arch, balloon garland, party decoration CITY_HERE, same day balloon decoration">
   <meta name="author" content="BRAND_NAME_HERE">
   <meta name="robots" content="index, follow">
   <!-- CLIENT REPLACE: Add your website URL for canonical -->
@@ -17,7 +21,8 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Balloon Decoration in CITY_HERE | BRAND_NAME_HERE">
-  <meta property="og:description" content="Premium balloon decoration in CITY_HERE. Same-day setup for birthdays, weddings, baby showers & corporate events. . Book now!">
+  <meta property="og:description"
+    content="Premium balloon decoration in CITY_HERE. Same-day setup for birthdays, weddings, baby showers & corporate events. . Book now!">
   <meta property="og:type" content="website">
   <!-- CLIENT REPLACE: Add your website URL and OG image URL -->
   <meta property="og:url" content="https://www.example.com/">
@@ -28,13 +33,15 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Balloon Decoration in CITY_HERE | BRAND_NAME_HERE">
-  <meta name="twitter:description" content="Premium balloon decoration . Same-day setup in CITY_HERE. Book via WhatsApp!">
+  <meta name="twitter:description"
+    content="Premium balloon decoration . Same-day setup in CITY_HERE. Book via WhatsApp!">
   <!-- CLIENT REPLACE: Add your OG image URL -->
   <meta name="twitter:image" content="https://www.example.com/images/og-banner.jpg">
 
   <!-- Favicon (Balloon emoji fallback) -->
   <!-- CLIENT REPLACE: Replace with your actual favicon file -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎈</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎈</text></svg>">
 
   <!-- JSON-LD Structured Data — LocalBusiness -->
   <!-- CLIENT REPLACE: Update all business details below -->
@@ -73,26 +80,87 @@
   <!-- Critical Above-the-Fold CSS (inlined for performance) -->
   <style>
     /* Page Loader */
-    .page-loader{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;transition:opacity .5s ease,visibility .5s ease}
-    .page-loader.hidden{opacity:0;visibility:hidden}
-    .page-loader__icon{font-size:3rem;animation:loaderBounce 0.6s ease infinite alternate}
-    .page-loader__text{font-family:'Poppins',sans-serif;font-size:.9rem;color:#666680;margin-top:12px}
-    @keyframes loaderBounce{0%{transform:translateY(0)}100%{transform:translateY(-12px)}}
+    .page-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      transition: opacity .5s ease, visibility .5s ease
+    }
+
+    .page-loader.hidden {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    .page-loader__icon {
+      font-size: 3rem;
+      animation: loaderBounce 0.6s ease infinite alternate
+    }
+
+    .page-loader__text {
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+      color: #666680;
+      margin-top: 12px
+    }
+
+    @keyframes loaderBounce {
+      0% {
+        transform: translateY(0)
+      }
+
+      100% {
+        transform: translateY(-12px)
+      }
+    }
 
     /* Critical: Navbar + Hero (prevent layout shift) */
-    body{margin:0;font-family:'Poppins',sans-serif;background:#FAFAFA;color:#1A1A2E}
-    .top-bar{background:#FFF0F8;padding:8px 0;font-size:.78rem}
-    .navbar{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #F0E0EB}
-    .container{max-width:1200px;margin:0 auto;padding-left:20px;padding-right:20px}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #FAFAFA;
+      color: #1A1A2E
+    }
+
+    .top-bar {
+      background: #FFF0F8;
+      padding: 8px 0;
+      font-size: .78rem
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid #F0E0EB
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px
+    }
 
     /* Keyboard focus outline */
-    :focus-visible{outline:2px solid #E91E8C;outline-offset:2px;border-radius:4px}
+    :focus-visible {
+      outline: 2px solid #E91E8C;
+      outline-offset: 2px;
+      border-radius: 4px
+    }
   </style>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
+
 <body>
 
   <!-- Page Loader -->
@@ -107,7 +175,12 @@
       <div class="container header__top-inner">
         <!-- Burger Icon (Mobile Only) -->
         <button class="header__burger" id="header-burger" aria-label="Open Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
 
         <!-- Logo -->
@@ -118,23 +191,35 @@
         <!-- Delivery Location -->
         <div class="header__location">
           <div class="header__location-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
           </div>
           <div class="header__location-text">
             <span class="header__location-label">DELIVER TO</span>
-            <span class="header__location-value">Pune <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            <span class="header__location-value">Pune <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></span>
           </div>
         </div>
 
         <!-- Search Bar -->
         <div class="header__search">
-          <svg class="header__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <svg class="header__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
           <input type="text" class="header__search-input" placeholder="Search &quot;Birthday decoration&quot;...">
           <button class="header__search-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
             Search
           </button>
         </div>
@@ -143,7 +228,12 @@
         <div class="header__actions">
           <a href="tel:PHONE_NUMBER_HERE" class="header__action-btn">
             <div class="header__action-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
             </div>
             <div class="header__action-text">
               <span class="header__action-label">CALL US</span>
@@ -152,7 +242,13 @@
           </a>
           <a href="#book" class="header__action-btn">
             <div class="header__action-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
             </div>
             <div class="header__action-text">
               <span class="header__action-label">RESERVE</span>
@@ -160,7 +256,7 @@
             </div>
           </a>
         </div>
-        
+
         <!-- Mobile Actions -->
         <div class="header__mobile-actions">
           <a href="https://wa.me/PHONE_NUMBER_HERE" class="btn-primary btn-sm header__mobile-cta">
@@ -169,13 +265,16 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Bottom Nav -->
     <div class="header__bottom">
       <div class="container header__bottom-inner">
         <ul class="header__nav">
           <li class="has-dropdown">
-            <a href="#">Balloon Decoration <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <a href="category-birthday.html">Balloon Decoration <svg width="12" height="12" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></a>
             <ul class="dropdown-menu">
               <li><a href="#">Birthday Decoration</a></li>
               <li><a href="#">Anniversary Decoration</a></li>
@@ -187,7 +286,10 @@
             </ul>
           </li>
           <li class="has-dropdown">
-            <a href="#">Anniversary Decoration <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <a href="category-anniversary.html">Anniversary Decoration <svg width="12" height="12" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></a>
             <ul class="dropdown-menu">
               <li><a href="#">Candle Light Dinner</a></li>
               <li><a href="#">Canopy Decor</a></li>
@@ -199,7 +301,10 @@
             </ul>
           </li>
           <li class="has-dropdown">
-            <a href="#">Baby Shower <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <a href="category-baby-shower.html">Baby Shower <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></a>
             <ul class="dropdown-menu">
               <li><a href="#">Baby Welcome</a></li>
               <li><a href="#">Annaprashan ceremony</a></li>
@@ -210,7 +315,10 @@
             </ul>
           </li>
           <li class="has-dropdown">
-            <a href="#">Baby Welcome <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <a href="category-baby-welcome.html">Baby Welcome <svg width="12" height="12" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></a>
             <ul class="dropdown-menu">
               <li><a href="#">Baby Welcome</a></li>
               <li><a href="#">Annaprashan ceremony</a></li>
@@ -223,7 +331,10 @@
             </ul>
           </li>
           <li class="has-dropdown">
-            <a href="#">Kids Special <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <a href="category-kids.html">Kids Special <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></a>
             <ul class="dropdown-menu">
               <li><a href="#">All Kids Special</a></li>
               <li><a href="#">Boss Baby Theme</a></li>
@@ -243,7 +354,10 @@
             </ul>
           </li>
           <li class="has-dropdown">
-            <a href="#">Other Decorations <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <a href="category-other.html">Other Decorations <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></a>
             <ul class="dropdown-menu">
               <li><a href="#">Balloon Bouquets</a></li>
               <li><a href="#">Birthday Decorations</a></li>
@@ -265,7 +379,10 @@
             </ul>
           </li>
           <li class="has-dropdown">
-            <a href="#">Wedding <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <a href="category-wedding.html">Wedding <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></a>
             <ul class="dropdown-menu">
               <li><a href="#">Bachelorette decorations</a></li>
               <li><a href="#">First Night Decorations</a></li>
@@ -277,7 +394,10 @@
             </ul>
           </li>
           <li class="has-dropdown">
-            <a href="#">Candle Light Dinner <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <a href="#">Candle Light Dinner <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></a>
             <ul class="dropdown-menu">
               <li><a href="#">Private Cabana Setup</a></li>
               <li><a href="#">Canopy Setup</a></li>
@@ -299,9 +419,13 @@
   <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
   <div class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu__list-container">
-            <ul class="mobile-menu__list">
+      <ul class="mobile-menu__list">
         <li class="mobile-has-dropdown">
-          <a href="#">Balloon Decoration <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="category-birthday.html">Balloon Decoration <svg width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="mobile-dropdown-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
           <ul class="mobile-dropdown-menu">
             <li><a href="#">Birthday Decoration</a></li>
             <li><a href="#">Anniversary Decoration</a></li>
@@ -313,7 +437,11 @@
           </ul>
         </li>
         <li class="mobile-has-dropdown">
-          <a href="#">Anniversary Decoration <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="category-anniversary.html">Anniversary Decoration <svg width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="mobile-dropdown-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
           <ul class="mobile-dropdown-menu">
             <li><a href="#">Candle Light Dinner</a></li>
             <li><a href="#">Canopy Decor</a></li>
@@ -325,7 +453,11 @@
           </ul>
         </li>
         <li class="mobile-has-dropdown">
-          <a href="#">Baby Shower <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="category-baby-shower.html">Baby Shower <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="mobile-dropdown-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
           <ul class="mobile-dropdown-menu">
             <li><a href="#">Baby Welcome</a></li>
             <li><a href="#">Annaprashan ceremony</a></li>
@@ -336,7 +468,11 @@
           </ul>
         </li>
         <li class="mobile-has-dropdown">
-          <a href="#">Baby Welcome <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="category-baby-welcome.html">Baby Welcome <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="mobile-dropdown-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
           <ul class="mobile-dropdown-menu">
             <li><a href="#">Baby Welcome</a></li>
             <li><a href="#">Annaprashan ceremony</a></li>
@@ -349,7 +485,11 @@
           </ul>
         </li>
         <li class="mobile-has-dropdown">
-          <a href="#">Kids Special <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="category-kids.html">Kids Special <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="mobile-dropdown-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
           <ul class="mobile-dropdown-menu">
             <li><a href="#">All Kids Special</a></li>
             <li><a href="#">Boss Baby Theme</a></li>
@@ -369,7 +509,11 @@
           </ul>
         </li>
         <li class="mobile-has-dropdown">
-          <a href="#">Other Decorations <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="category-other.html">Other Decorations <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="mobile-dropdown-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
           <ul class="mobile-dropdown-menu">
             <li><a href="#">Balloon Bouquets</a></li>
             <li><a href="#">Birthday Decorations</a></li>
@@ -391,7 +535,11 @@
           </ul>
         </li>
         <li class="mobile-has-dropdown">
-          <a href="#">Wedding <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="category-wedding.html">Wedding <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="mobile-dropdown-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
           <ul class="mobile-dropdown-menu">
             <li><a href="#">Bachelorette decorations</a></li>
             <li><a href="#">First Night Decorations</a></li>
@@ -403,7 +551,10 @@
           </ul>
         </li>
         <li class="mobile-has-dropdown">
-          <a href="#">Candle Light Dinner <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <a href="#">Candle Light Dinner <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-dropdown-icon">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></a>
           <ul class="mobile-dropdown-menu">
             <li><a href="#">Private Cabana Setup</a></li>
             <li><a href="#">Canopy Setup</a></li>
@@ -417,29 +568,43 @@
           </ul>
         </li>
       </ul>
-      
+
       <div class="mobile-menu__contact">
         <h4 class="mobile-menu__contact-title">CONTACT US</h4>
         <div class="mobile-menu__contact-items">
           <a href="https://wa.me/PHONE_NUMBER_HERE" class="mobile-menu__contact-item">
             <div class="mobile-menu__contact-icon whatsapp">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+              </svg>
             </div>
             <div class="mobile-menu__contact-text">
               <span class="mobile-menu__contact-label">WhatsApp Us</span>
               <span class="mobile-menu__contact-sub">Available 24x7</span>
             </div>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
           </a>
           <a href="tel:PHONE_NUMBER_HERE" class="mobile-menu__contact-item">
             <div class="mobile-menu__contact-icon phone">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
             </div>
             <div class="mobile-menu__contact-text">
               <span class="mobile-menu__contact-label">Call Us</span>
               <span class="mobile-menu__contact-sub">10AM - 7:30PM</span>
             </div>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-left:auto">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
           </a>
         </div>
       </div>
@@ -451,32 +616,38 @@
     .new-hero-banner {
       padding: 20px 0;
     }
+
     .new-hero-banner img {
       width: 100%;
       height: auto;
       border-radius: 20px;
       display: block;
     }
+
     .new-categories {
       padding: 40px 0;
       text-align: center;
     }
+
     .new-categories-title {
       font-size: 28px;
       font-weight: 600;
       color: #1A1A2E;
       margin-bottom: 8px;
     }
+
     .new-categories-subtitle {
       font-size: 16px;
       color: #666680;
       margin-bottom: 40px;
     }
+
     .new-categories-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 24px;
     }
+
     .new-category-card {
       display: flex;
       flex-direction: column;
@@ -485,6 +656,7 @@
       cursor: pointer;
       text-decoration: none;
     }
+
     .new-category-card img {
       width: 100%;
       border-radius: 16px;
@@ -492,28 +664,37 @@
       aspect-ratio: 1;
       transition: transform 0.3s ease;
     }
+
     .new-category-card:hover img {
       transform: translateY(-5px);
     }
+
     .new-category-card span {
       font-size: 16px;
       font-weight: 500;
       color: #1A1A2E;
     }
-    
-    @media (max-width: 992px) {
+
+    @media (min-width: 1024px) {
+      .new-categories-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
       .new-categories-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    @media (max-width: 576px) {
+    @media (max-width: 767px) {
       .new-categories-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 12px;
       }
+
       .new-categories-title {
         font-size: 24px;
       }
+
       .new-categories-subtitle {
         font-size: 14px;
         margin-bottom: 24px;
@@ -532,220 +713,56 @@
     <div class="container">
       <h2 class="new-categories-title">Top Balloon Decoration Categories</h2>
       <p class="new-categories-subtitle">Trusted Decorators for All Events</p>
-      
+
       <div class="new-categories-grid">
-        <a href="#" class="new-category-card">
-          <img src="public/Categories/Birthday.png" alt="Birthday Decoration" />
+        <a href="category-birthday.html" class="new-category-card">
+          <img src="public/Categories/Birthday.webp" alt="Birthday Decoration" />
           <span>Birthday Decoration</span>
         </a>
-        <a href="#" class="new-category-card">
-          <img src="public/Categories/Kids Special.jpeg" alt="Kids Decoration" />
+        <a href="category-kids.html" class="new-category-card">
+          <img src="public/Categories/Kids Special.webp" alt="Kids Decoration" />
           <span>Kids Decoration</span>
         </a>
-        <a href="#" class="new-category-card">
-          <img src="public/Categories/Baby Welcome.png" alt="Newborn Welcome" />
+        <a href="category-baby-welcome.html" class="new-category-card">
+          <img src="public/Categories/Baby Welcome.webp" alt="Newborn Welcome" />
           <span>Newborn Welcome</span>
         </a>
-        <a href="#" class="new-category-card">
-          <img src="public/Categories/Anniversary Decor.png" alt="Anniversary Decoration" />
+        <a href="category-anniversary.html" class="new-category-card">
+          <img src="public/Categories/Anniversary Decor.webp" alt="Anniversary Decoration" />
           <span>Anniversary Decoration</span>
         </a>
-        <a href="#" class="new-category-card">
-          <img src="public/Categories/Baby Shower.png" alt="Baby Shower" />
+        <a href="category-baby-shower.html" class="new-category-card">
+          <img src="public/Categories/Baby Shower.webp" alt="Baby Shower" />
           <span>Baby Shower</span>
         </a>
-        <a href="#" class="new-category-card">
-          <img src="public/Categories/Ceremony Decor.png" alt="Wedding Decor" />
+        <a href="category-wedding.html" class="new-category-card">
+          <img src="public/Categories/Ceremony Decor.webp" alt="Wedding Decor" />
           <span>Wedding Decor</span>
         </a>
-      </div>
-    </div>
-  </section>
-
-
-  
-  <!-- ============ NEW BIRTHDAY DECORATION SECTION ============ -->
-  <style>
-    .new-bd-section { padding: 40px 0; }
-    .new-bd-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; }
-    .new-bd-title { font-size: 24px; font-weight: 600; color: #1A1A2E; margin: 0; }
-    .new-bd-view-all { color: #E91E8C; font-weight: 500; text-decoration: none; border-bottom: 1px solid #E91E8C; font-size: 14px; }
-    
-    .new-bd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
-    .new-bd-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #eee; min-width: 0; }
-    .new-bd-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
-    .new-bd-card-body { padding: 16px; }
-    .new-bd-card-title { font-size: 16px; font-weight: 500; color: #1A1A2E; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .new-bd-rating { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: #FF9800; }
-    .new-bd-rating span { color: #888; font-weight: 400; }
-    
-    .new-kids-section { padding: 40px 0; text-align: center; }
-    .new-kids-title { font-size: 24px; font-weight: 600; color: #1A1A2E; margin-bottom: 8px; }
-    .new-kids-subtitle { font-size: 14px; color: #666; margin-bottom: 32px; }
-    
-    .new-kids-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
-    .new-kids-card { display: flex; flex-direction: column; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
-    .new-kids-card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 16px; background: #FFF4E6; }
-    .new-kids-card span { font-size: 14px; font-weight: 600; color: #1A1A2E; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center; display: block; padding: 0 4px; box-sizing: border-box; }
-    
-    @media (max-width: 768px) {
-      .new-bd-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .new-bd-card img { height: 140px; }
-      .new-kids-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    }
-  </style>
-
-  <section id="services-grid" class="new-bd-section">
-    <div class="container">
-      <div class="new-bd-header">
-        <h2 class="new-bd-title">Birthday Decoration</h2>
-        <a href="#" class="new-bd-view-all">View All</a>
-      </div>
-      
-      <div class="new-bd-grid">
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/FFD6E8/1A1A2E?text=Simple+Decor" alt="Simple Balloon Decor for Home">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Simple Balloon Decor for Home">Simple Balloon Decor for Home</div>
-            <div class="new-bd-rating">⭐ 4.9 <span>(487)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/FFF0F8/1A1A2E?text=Rose+Gold" alt="Rose Gold Birthday Home Decor">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Rose Gold Birthday Home Decor">Rose Gold Birthday Home Decor</div>
-            <div class="new-bd-rating">⭐ 4.9 <span>(352)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/E8D5FF/1A1A2E?text=Arch+Backdrop" alt="Adorable Birthday Arch Backdrop">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Adorable Birthday Arch Backdrop">Adorable Birthday Arch Backdrop</div>
-            <div class="new-bd-rating">⭐ 5.0 <span>(325)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/FFE0F0/1A1A2E?text=Blush+Theme" alt="Blush & Glow Birthday Theme">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Blush & Glow Birthday Theme">Blush & Glow Birthday Theme</div>
-            <div class="new-bd-rating">⭐ 4.9 <span>(287)</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="new-kids-section">
-    <div class="container">
-      <h2 class="new-kids-title">Kids Birthday Decorations</h2>
-      <p class="new-kids-subtitle">Fun-Filled Themes for Every Celebration!</p>
-      
-      <div class="new-kids-grid">
-        <a href="#" class="new-kids-card">
-          <img src="https://via.placeholder.com/200/FFF4E6/1A1A2E?text=Cocomelon" alt="Cocomelon Theme">
-          <span>Cocomelon Theme</span>
+        <a href="category-corporate.html" class="new-category-card">
+          <img src="public/Categories/Corporate event.webp" alt="Corporate Event Decor" />
+          <span>Corporate Event Decor</span>
         </a>
-        <a href="#" class="new-kids-card">
-          <img src="https://via.placeholder.com/200/E6F4FF/1A1A2E?text=Baby+Shark" alt="Baby Shark Theme">
-          <span>Baby Shark Theme</span>
+        <a href="category-other.html" class="new-category-card">
+          <img src="public/Categories/Canopy Decor.webp" alt="Canopy Decor" loading="lazy" />
+          <span>Canopy Decor</span>
         </a>
-        <a href="#" class="new-kids-card">
-          <img src="https://via.placeholder.com/200/F0F0F0/1A1A2E?text=Boss+Baby" alt="Boss Baby Theme">
-          <span>Boss Baby Theme</span>
+        <a href="category-engagement.html" class="new-category-card">
+          <img src="public/Categories/Engagement Decor.webp" alt="Engagement Decoration" loading="lazy" />
+          <span>Engagement Decor</span>
         </a>
-        <a href="#" class="new-kids-card">
-          <img src="https://via.placeholder.com/200/E6FFE6/1A1A2E?text=Jungle" alt="Jungle Theme">
-          <span>Jungle Theme</span>
+        <a href="category-room-decor.html" class="new-category-card">
+          <img src="public/Categories/Room Decor New.webp" alt="Room Decoration" loading="lazy" />
+          <span>Room Decor</span>
         </a>
-        <a href="#" class="new-kids-card">
-          <img src="https://via.placeholder.com/200/E6E6FF/1A1A2E?text=Frozen" alt="Frozen Theme">
-          <span>Frozen Theme</span>
+        <a href="category-festival.html" class="new-category-card">
+          <img src="public/Categories/Festival Decor.webp" alt="Festival Decoration" loading="lazy" />
+          <span>Festival Decor</span>
         </a>
-        <a href="#" class="new-kids-card">
-          <img src="https://via.placeholder.com/200/FFE6F0/1A1A2E?text=Mermaid" alt="Mermaid Theme">
-          <span>Mermaid Theme</span>
+        <a href="category-retirement.html" class="new-category-card">
+          <img src="public/Categories/Retirement Decor.webp" alt="Retirement Decoration" loading="lazy" />
+          <span>Retirement Decor</span>
         </a>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="new-bd-section">
-    <div class="container">
-      <div class="new-bd-header">
-        <h2 class="new-bd-title">Welcome Baby Decoration</h2>
-        <a href="#" class="new-bd-view-all">View All</a>
-      </div>
-      
-      <div class="new-bd-grid">
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/E8D5FF/1A1A2E?text=Welcome+Princess" alt="Welcome Baby Princess Decoration">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Welcome Baby Princess Decoration">Welcome Baby Princess Decoration</div>
-            <div class="new-bd-rating">⭐ 4.8 <span>(287)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/D5F0FF/1A1A2E?text=Homecoming" alt="Baby Homecoming Setup">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Baby Homecoming Setup">Baby Homecoming Setup</div>
-            <div class="new-bd-rating">⭐ 4.7 <span>(281)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/FFE8E0/1A1A2E?text=Balloon+Setup" alt="Welcome Balloon Setup">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Welcome Balloon Setup">Welcome Balloon Setup</div>
-            <div class="new-bd-rating">⭐ 5.0 <span>(610)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/E6E6FF/1A1A2E?text=Simple+Welcome" alt="Simple Welcome Balloon Decoration">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Simple Welcome Balloon Decoration">Simple Welcome Balloon Decoration</div>
-            <div class="new-bd-rating">⭐ 4.9 <span>(317)</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="new-bd-section">
-    <div class="container">
-      <div class="new-bd-header">
-        <h2 class="new-bd-title">Baby Shower Decoration</h2>
-        <a href="#" class="new-bd-view-all">View All</a>
-      </div>
-      
-      <div class="new-bd-grid">
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/D5F0FF/1A1A2E?text=Dreamy+Baby+Shower" alt="Dreamy Baby Shower Balloons">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Dreamy Baby Shower Balloons">Dreamy Baby Shower Balloons</div>
-            <div class="new-bd-rating">⭐ 4.8 <span>(190)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/FFE0A0/1A1A2E?text=Oh+Baby+Decor" alt="Oh Baby Decor for Mom to be">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Oh Baby Decor for Mom to be">Oh Baby Decor for Mom to be</div>
-            <div class="new-bd-rating">⭐ 4.9 <span>(315)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/FFD6E8/1A1A2E?text=Luxe+Wall" alt="Luxe Oh Baby Wall Setup">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Luxe Oh Baby Wall Setup">Luxe Oh Baby Wall Setup</div>
-            <div class="new-bd-rating">⭐ 5.0 <span>(210)</span></div>
-          </div>
-        </div>
-        <div class="new-bd-card">
-          <img src="https://via.placeholder.com/400x300/E6FFE6/1A1A2E?text=Flower+Backdrop" alt="Flower Backdrop for Baby Shower">
-          <div class="new-bd-card-body">
-            <div class="new-bd-card-title" title="Flower Backdrop for Baby Shower">Flower Backdrop for Baby Shower</div>
-            <div class="new-bd-rating">⭐ 4.9 <span>(142)</span></div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -755,7 +772,8 @@
     <div class="container">
       <div class="hiw__header reveal">
         <h2 class="section-title" style="text-align:center;">How It <span>Works</span></h2>
-        <p class="section-subtitle" style="text-align:center;margin:0 auto;">From browsing to celebrating — booking your dream decoration is effortless.</p>
+        <p class="section-subtitle" style="text-align:center;margin:0 auto;">From browsing to celebrating — booking your
+          dream decoration is effortless.</p>
       </div>
 
       <div class="hiw__steps">
@@ -770,7 +788,8 @@
         <!-- Arrow -->
         <div class="hiw__arrow" aria-hidden="true">
           <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
-            <path d="M0 10H35M35 10L28 3M35 10L28 17" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0 10H35M35 10L28 3M35 10L28 17" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </div>
 
@@ -785,7 +804,8 @@
         <!-- Arrow -->
         <div class="hiw__arrow" aria-hidden="true">
           <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
-            <path d="M0 10H35M35 10L28 3M35 10L28 17" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0 10H35M35 10L28 3M35 10L28 17" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </div>
 
@@ -809,14 +829,16 @@
           <h2 class="section-title">Our Recent <span>Work</span></h2>
           <p class="section-subtitle">Browse our latest balloon masterpieces</p>
         </div>
-        <a href="https://instagram.com/INSTAGRAM_HERE" class="gallery__insta-link btn-outline btn-sm" target="_blank" rel="noopener">
+        <a href="https://instagram.com/INSTAGRAM_HERE" class="gallery__insta-link btn-outline btn-sm" target="_blank"
+          rel="noopener">
           See More on Instagram →
         </a>
       </div>
 
       <!-- Masonry Grid -->
       <div class="gallery__grid">
-        <div class="gallery__card gallery__card--tall reveal" data-label="Birthday Setup" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #FFD6E8, #FF8CC8);">
+        <div class="gallery__card gallery__card--tall reveal" data-label="Birthday Setup" onclick="openLightbox(this)"
+          style="background: linear-gradient(135deg, #FFD6E8, #FF8CC8);">
           <div class="gallery__card-icon">🎂</div>
           <span class="gallery__card-label">Birthday Setup</span>
           <div class="gallery__card-overlay">
@@ -824,7 +846,8 @@
           </div>
         </div>
 
-        <div class="gallery__card reveal" data-delay="100" data-label="Wedding Arch" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #FFF5E0, #FFE0A0);">
+        <div class="gallery__card reveal" data-delay="100" data-label="Wedding Arch" onclick="openLightbox(this)"
+          style="background: linear-gradient(135deg, #FFF5E0, #FFE0A0);">
           <div class="gallery__card-icon">💒</div>
           <span class="gallery__card-label">Wedding Arch</span>
           <div class="gallery__card-overlay">
@@ -832,7 +855,8 @@
           </div>
         </div>
 
-        <div class="gallery__card reveal" data-delay="200" data-label="Baby Shower" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #D5F0FF, #A0DAFF);">
+        <div class="gallery__card reveal" data-delay="200" data-label="Baby Shower" onclick="openLightbox(this)"
+          style="background: linear-gradient(135deg, #D5F0FF, #A0DAFF);">
           <div class="gallery__card-icon">👶</div>
           <span class="gallery__card-label">Baby Shower</span>
           <div class="gallery__card-overlay">
@@ -840,7 +864,8 @@
           </div>
         </div>
 
-        <div class="gallery__card reveal" data-label="Corporate Event" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #D5E8FF, #A0C4FF);">
+        <div class="gallery__card reveal" data-label="Corporate Event" onclick="openLightbox(this)"
+          style="background: linear-gradient(135deg, #D5E8FF, #A0C4FF);">
           <div class="gallery__card-icon">🏢</div>
           <span class="gallery__card-label">Corporate Event</span>
           <div class="gallery__card-overlay">
@@ -848,7 +873,8 @@
           </div>
         </div>
 
-        <div class="gallery__card gallery__card--tall reveal" data-delay="100" data-label="Theme Party" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #E8D5FF, #C9A0FF);">
+        <div class="gallery__card gallery__card--tall reveal" data-delay="100" data-label="Theme Party"
+          onclick="openLightbox(this)" style="background: linear-gradient(135deg, #E8D5FF, #C9A0FF);">
           <div class="gallery__card-icon">🎊</div>
           <span class="gallery__card-label">Theme Party</span>
           <div class="gallery__card-overlay">
@@ -856,7 +882,8 @@
           </div>
         </div>
 
-        <div class="gallery__card reveal" data-delay="200" data-label="Balloon Column" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #FFE8E0, #FFB8A0);">
+        <div class="gallery__card reveal" data-delay="200" data-label="Balloon Column" onclick="openLightbox(this)"
+          style="background: linear-gradient(135deg, #FFE8E0, #FFB8A0);">
           <div class="gallery__card-icon">🎈</div>
           <span class="gallery__card-label">Balloon Column</span>
           <div class="gallery__card-overlay">
@@ -864,7 +891,8 @@
           </div>
         </div>
 
-        <div class="gallery__card reveal" data-label="Stage Décor" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #FFE0F0, #E8A0FF);">
+        <div class="gallery__card reveal" data-label="Stage Décor" onclick="openLightbox(this)"
+          style="background: linear-gradient(135deg, #FFE0F0, #E8A0FF);">
           <div class="gallery__card-icon">🎭</div>
           <span class="gallery__card-label">Stage Décor</span>
           <div class="gallery__card-overlay">
@@ -872,7 +900,8 @@
           </div>
         </div>
 
-        <div class="gallery__card gallery__card--tall reveal" data-delay="100" data-label="Engagement" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #FFE0E0, #FFB0B0);">
+        <div class="gallery__card gallery__card--tall reveal" data-delay="100" data-label="Engagement"
+          onclick="openLightbox(this)" style="background: linear-gradient(135deg, #FFE0E0, #FFB0B0);">
           <div class="gallery__card-icon">💍</div>
           <span class="gallery__card-label">Engagement</span>
           <div class="gallery__card-overlay">
@@ -880,7 +909,8 @@
           </div>
         </div>
 
-        <div class="gallery__card reveal" data-delay="200" data-label="Kids Party" onclick="openLightbox(this)" style="background: linear-gradient(135deg, #D5FFE8, #A0FFD0);">
+        <div class="gallery__card reveal" data-delay="200" data-label="Kids Party" onclick="openLightbox(this)"
+          style="background: linear-gradient(135deg, #D5FFE8, #A0FFD0);">
           <div class="gallery__card-icon">🦄</div>
           <span class="gallery__card-label">Kids Party</span>
           <div class="gallery__card-overlay">
@@ -920,8 +950,12 @@
           <span class="about__badge">🎈 Our Story</span>
           <!-- CLIENT REPLACE: Update brand name and city below -->
           <h2 class="section-title">Why Choose <span>BRAND_NAME_HERE</span>?</h2>
-          <p class="about__text">We are CITY_HERE's most trusted balloon decoration service, turning ordinary spaces into extraordinary celebrations since 2016. What started as a passion for bringing joy to birthdays has grown into a full-service decoration studio trusted by 500+ families across the city.</p>
-          <p class="about__text">From intimate room surprises to grand wedding setups, our creative team handcrafts every design with premium-quality balloons, fresh flowers, LED elements, and personalized touches that make your event truly unforgettable.</p>
+          <p class="about__text">We are CITY_HERE's most trusted balloon decoration service, turning ordinary spaces
+            into extraordinary celebrations since 2016. What started as a passion for bringing joy to birthdays has
+            grown into a full-service decoration studio trusted by 500+ families across the city.</p>
+          <p class="about__text">From intimate room surprises to grand wedding setups, our creative team handcrafts
+            every design with premium-quality balloons, fresh flowers, LED elements, and personalized touches that make
+            your event truly unforgettable.</p>
 
           <!-- Stats Row -->
           <div class="about__stats">
@@ -954,7 +988,8 @@
             <span class="about__feature-icon">🎨</span>
             <div>
               <h4 class="about__feature-title">Creative Designs</h4>
-              <p class="about__feature-desc">Custom themes tailored to your vision — from Pinterest boards to reality</p>
+              <p class="about__feature-desc">Custom themes tailored to your vision — from Pinterest boards to reality
+              </p>
             </div>
           </div>
 
@@ -1014,7 +1049,8 @@
             </div>
           </div>
           <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">They did an amazing job for my daughter's 5th birthday! The unicorn theme was exactly what we wanted. The team arrived on time and the setup was magical. Highly recommended!</p>
+          <p class="testimonial-card__text">They did an amazing job for my daughter's 5th birthday! The unicorn theme
+            was exactly what we wanted. The team arrived on time and the setup was magical. Highly recommended!</p>
           <div class="testimonial-card__footer">
             <span class="testimonial-card__verified">✓ VERIFIED BOOKING</span>
             <span class="testimonial-card__event tag-pill">🎂 Birthday</span>
@@ -1031,7 +1067,8 @@
             </div>
           </div>
           <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">Surprised my wife on our anniversary and she was in tears! The room decoration with heart balloons, LED candles and rose petals was absolutely beautiful. Worth every rupee.</p>
+          <p class="testimonial-card__text">Surprised my wife on our anniversary and she was in tears! The room
+            decoration with heart balloons, LED candles and rose petals was absolutely beautiful. Worth every rupee.</p>
           <div class="testimonial-card__footer">
             <span class="testimonial-card__verified">✓ VERIFIED BOOKING</span>
             <span class="testimonial-card__event tag-pill">💍 Anniversary</span>
@@ -1048,7 +1085,9 @@
             </div>
           </div>
           <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">Booked the baby shower package for my sister. The pastel theme was so dreamy! Everyone kept asking where we got the decoration from. Will definitely book again for future events.</p>
+          <p class="testimonial-card__text">Booked the baby shower package for my sister. The pastel theme was so
+            dreamy! Everyone kept asking where we got the decoration from. Will definitely book again for future events.
+          </p>
           <div class="testimonial-card__footer">
             <span class="testimonial-card__verified">✓ VERIFIED BOOKING</span>
             <span class="testimonial-card__event tag-pill">👶 Baby Shower</span>
@@ -1065,7 +1104,9 @@
             </div>
           </div>
           <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">Used their services for our company's annual day celebration. Very professional team, they understood our branding requirements perfectly. The balloon columns at the entrance were stunning!</p>
+          <p class="testimonial-card__text">Used their services for our company's annual day celebration. Very
+            professional team, they understood our branding requirements perfectly. The balloon columns at the entrance
+            were stunning!</p>
           <div class="testimonial-card__footer">
             <span class="testimonial-card__verified">✓ VERIFIED BOOKING</span>
             <span class="testimonial-card__event tag-pill">🏢 Corporate</span>
@@ -1082,7 +1123,9 @@
             </div>
           </div>
           <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">My son's Avengers theme party was a huge hit! The balloon arch with character cut-outs was incredible. Kids were so excited. The team even cleaned up everything after the party. Amazing service!</p>
+          <p class="testimonial-card__text">My son's Avengers theme party was a huge hit! The balloon arch with
+            character cut-outs was incredible. Kids were so excited. The team even cleaned up everything after the
+            party. Amazing service!</p>
           <div class="testimonial-card__footer">
             <span class="testimonial-card__verified">✓ VERIFIED BOOKING</span>
             <span class="testimonial-card__event tag-pill">🎊 Kids Theme</span>
@@ -1099,7 +1142,9 @@
             </div>
           </div>
           <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">Booked them for our wedding mandap and entrance arch. The white &amp; gold theme was elegant and classy. Our guests couldn't stop taking photos. Best decision we made for the wedding decor!</p>
+          <p class="testimonial-card__text">Booked them for our wedding mandap and entrance arch. The white &amp; gold
+            theme was elegant and classy. Our guests couldn't stop taking photos. Best decision we made for the wedding
+            decor!</p>
           <div class="testimonial-card__footer">
             <span class="testimonial-card__verified">✓ VERIFIED BOOKING</span>
             <span class="testimonial-card__event tag-pill">💒 Wedding</span>
@@ -1142,7 +1187,8 @@
     <div class="container">
       <div class="faq__header reveal">
         <h2 class="section-title" style="text-align:center;">Frequently Asked <span>Questions</span></h2>
-        <p class="section-subtitle" style="text-align:center;margin:0 auto;">Everything you need to know before booking</p>
+        <p class="section-subtitle" style="text-align:center;margin:0 auto;">Everything you need to know before booking
+        </p>
       </div>
 
       <div class="faq__list" id="faq-list">
@@ -1154,7 +1200,9 @@
           </button>
           <div class="faq__answer">
             <div class="faq__answer-inner">
-              <p>Yes! We offer same-day decoration services across CITY_HERE and nearby areas. If you book before 12 PM, we can usually set up by evening on the same day. However, for best results and to ensure availability of your preferred design, we recommend booking at least 1–2 days in advance.</p>
+              <p>Yes! We offer same-day decoration services across CITY_HERE and nearby areas. If you book before 12 PM,
+                we can usually set up by evening on the same day. However, for best results and to ensure availability
+                of your preferred design, we recommend booking at least 1–2 days in advance.</p>
             </div>
           </div>
         </div>
@@ -1167,7 +1215,10 @@
           </button>
           <div class="faq__answer">
             <div class="faq__answer-inner">
-              <p>Our packages start from just ₹999 for a simple balloon setup. Most popular birthday and anniversary packages range from ₹1,799 to ₹3,499. For large events like weddings and corporate functions, we offer custom quotes based on your venue size and requirements. All prices include setup, materials, and cleanup.</p>
+              <p>Our packages start from just ₹999 for a simple balloon setup. Most popular birthday and anniversary
+                packages range from ₹1,799 to ₹3,499. For large events like weddings and corporate functions, we offer
+                custom quotes based on your venue size and requirements. All prices include setup, materials, and
+                cleanup.</p>
             </div>
           </div>
         </div>
@@ -1180,7 +1231,9 @@
           </button>
           <div class="faq__answer">
             <div class="faq__answer-inner">
-              <p>Absolutely! Our team comes fully equipped with everything needed — premium quality balloons, foils, ribbons, LED lights, tapes, stands, and all accessories. You don't need to arrange anything. Just give us access to the venue, and we'll handle the rest from start to finish.</p>
+              <p>Absolutely! Our team comes fully equipped with everything needed — premium quality balloons, foils,
+                ribbons, LED lights, tapes, stands, and all accessories. You don't need to arrange anything. Just give
+                us access to the venue, and we'll handle the rest from start to finish.</p>
             </div>
           </div>
         </div>
@@ -1193,7 +1246,10 @@
           </button>
           <div class="faq__answer">
             <div class="faq__answer-inner">
-              <p>Setup time depends on the package size. A basic balloon setup takes about 30–45 minutes. Medium setups like birthday arches take 1–1.5 hours. Grand venue decorations for weddings and corporate events can take 2–4 hours. We always arrive well before your event starts so everything is picture-perfect when guests arrive.</p>
+              <p>Setup time depends on the package size. A basic balloon setup takes about 30–45 minutes. Medium setups
+                like birthday arches take 1–1.5 hours. Grand venue decorations for weddings and corporate events can
+                take 2–4 hours. We always arrive well before your event starts so everything is picture-perfect when
+                guests arrive.</p>
             </div>
           </div>
         </div>
@@ -1206,7 +1262,10 @@
           </button>
           <div class="faq__answer">
             <div class="faq__answer-inner">
-              <p>Of course! Customization is our specialty. You can choose specific colors, themes, add name foils, number balloons, LED neon signs, flower combinations — anything you envision. Just share your ideas, a Pinterest board, or reference images on WhatsApp, and our team will create a custom design for you within hours.</p>
+              <p>Of course! Customization is our specialty. You can choose specific colors, themes, add name foils,
+                number balloons, LED neon signs, flower combinations — anything you envision. Just share your ideas, a
+                Pinterest board, or reference images on WhatsApp, and our team will create a custom design for you
+                within hours.</p>
             </div>
           </div>
         </div>
@@ -1219,7 +1278,10 @@
           </button>
           <div class="faq__answer">
             <div class="faq__answer-inner">
-              <p>Booking is super easy! Simply click any "Book on WhatsApp" button on this page, or message us directly at PHONE_NUMBER_HERE. Share your event date, venue location in CITY_HERE, preferred theme, and budget. We'll send you a custom quote within 30 minutes. A 50% advance via UPI (GPay/PhonePe) confirms your booking — remaining payment on the day of setup.</p>
+              <p>Booking is super easy! Simply click any "Book on WhatsApp" button on this page, or message us directly
+                at PHONE_NUMBER_HERE. Share your event date, venue location in CITY_HERE, preferred theme, and budget.
+                We'll send you a custom quote within 30 minutes. A 50% advance via UPI (GPay/PhonePe) confirms your
+                booking — remaining payment on the day of setup.</p>
             </div>
           </div>
         </div>
@@ -1232,7 +1294,8 @@
     <div class="container">
       <div class="contact__header reveal">
         <h2 class="section-title" style="text-align:center;">Get In <span>Touch</span></h2>
-        <p class="section-subtitle" style="text-align:center;margin:0 auto;">Have a question or want a custom quote? Reach out to us!</p>
+        <p class="section-subtitle" style="text-align:center;margin:0 auto;">Have a question or want a custom quote?
+          Reach out to us!</p>
       </div>
 
       <div class="contact__grid">
@@ -1263,7 +1326,8 @@
               <span class="contact__info-icon">💬</span>
               <div>
                 <strong>WhatsApp</strong>
-                <a href="https://wa.me/PHONE_NUMBER_HERE?text=Hi!%20I%20have%20a%20query%20about%20decoration." class="contact__info-link" target="_blank" rel="noopener">Chat with us</a>
+                <a href="https://wa.me/PHONE_NUMBER_HERE?text=Hi!%20I%20have%20a%20query%20about%20decoration."
+                  class="contact__info-link" target="_blank" rel="noopener">Chat with us</a>
               </div>
             </div>
 
@@ -1286,16 +1350,27 @@
 
           <div class="contact__info-social">
             <!-- Instagram -->
-            <a href="https://instagram.com/INSTAGRAM_HERE" target="_blank" rel="noopener" class="contact__social-link" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            <a href="https://instagram.com/INSTAGRAM_HERE" target="_blank" rel="noopener" class="contact__social-link"
+              aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
             </a>
             <!-- Facebook -->
             <a href="#" class="contact__social-link" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
             </a>
             <!-- WhatsApp -->
-            <a href="https://wa.me/PHONE_NUMBER_HERE?text=Hi!%20I%20have%20a%20query." target="_blank" rel="noopener" class="contact__social-link contact__social-link--wa" aria-label="WhatsApp">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <a href="https://wa.me/PHONE_NUMBER_HERE?text=Hi!%20I%20have%20a%20query." target="_blank" rel="noopener"
+              class="contact__social-link contact__social-link--wa" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -1336,7 +1411,8 @@
 
             <div class="form-group form-group--full">
               <label for="cf-message" class="form-label">Message (Optional)</label>
-              <textarea id="cf-message" name="message" class="form-input form-textarea" placeholder="Tell us about your vision, theme preferences, venue details..." rows="4"></textarea>
+              <textarea id="cf-message" name="message" class="form-input form-textarea"
+                placeholder="Tell us about your vision, theme preferences, venue details..." rows="4"></textarea>
             </div>
 
             <button type="submit" class="btn-primary contact__form-submit" id="cf-submit">
@@ -1371,14 +1447,25 @@
           <a href="#hero-banner" class="footer__logo">🎈 BRAND_NAME_HERE</a>
           <p class="footer__tagline">TAGLINE_HERE</p>
           <div class="footer__social">
-            <a href="https://instagram.com/INSTAGRAM_HERE" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            <a href="https://instagram.com/INSTAGRAM_HERE" target="_blank" rel="noopener" class="footer__social-link"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
             </a>
             <a href="#" class="footer__social-link" aria-label="Facebook">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
             </a>
-            <a href="https://wa.me/PHONE_NUMBER_HERE" target="_blank" rel="noopener" class="footer__social-link footer__social-link--wa" aria-label="WhatsApp">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <a href="https://wa.me/PHONE_NUMBER_HERE" target="_blank" rel="noopener"
+              class="footer__social-link footer__social-link--wa" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -1388,7 +1475,7 @@
           <h4 class="footer__col-title">Quick Links</h4>
           <ul class="footer__links">
             <li><a href="#hero-banner">Home</a></li>
-            <li><a href="#services-grid">Services</a></li>
+            <li><a href="category-birthday.html">Services</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#testimonials">Reviews</a></li>
@@ -1401,12 +1488,12 @@
         <div class="footer__col">
           <h4 class="footer__col-title">Our Services</h4>
           <ul class="footer__links">
-            <li><a href="#services-grid">Birthday Decor</a></li>
-            <li><a href="#services-grid">Anniversary Setup</a></li>
-            <li><a href="#services-grid">Baby Shower</a></li>
-            <li><a href="#services-grid">Wedding Decor</a></li>
-            <li><a href="#services-grid">Corporate Events</a></li>
-            <li><a href="#services-grid">Theme Parties</a></li>
+            <li><a href="category-birthday.html">Birthday Decor</a></li>
+            <li><a href="category-anniversary.html">Anniversary Setup</a></li>
+            <li><a href="category-baby-shower.html">Baby Shower</a></li>
+            <li><a href="category-wedding.html">Wedding Decor</a></li>
+            <li><a href="category-corporate.html">Corporate Events</a></li>
+            <li><a href="category-kids.html">Theme Parties</a></li>
           </ul>
         </div>
 
@@ -1418,7 +1505,8 @@
             <li>📍 CITY_HERE</li>
             <li><a href="tel:PHONE_NUMBER_HERE">📞 PHONE_NUMBER_HERE</a></li>
             <li><a href="mailto:EMAIL_HERE">📧 EMAIL_HERE</a></li>
-            <li><a href="https://instagram.com/INSTAGRAM_HERE" target="_blank" rel="noopener">📸 @INSTAGRAM_HERE</a></li>
+            <li><a href="https://instagram.com/INSTAGRAM_HERE" target="_blank" rel="noopener">📸 @INSTAGRAM_HERE</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -1432,13 +1520,12 @@
   </footer>
 
   <!-- ============ FLOATING WHATSAPP BUTTON ============ -->
-  <a href="https://wa.me/PHONE_NUMBER_HERE?text=Hi!%20I%20have%20a%20query%20about%20decoration."
-     class="whatsapp-float"
-     id="whatsapp-float"
-     target="_blank"
-     rel="noopener"
-     aria-label="Chat on WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a href="https://wa.me/PHONE_NUMBER_HERE?text=Hi!%20I%20have%20a%20query%20about%20decoration." class="whatsapp-float"
+    id="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
     <span class="whatsapp-float__tooltip">Chat with us!</span>
   </a>
 
@@ -1448,8 +1535,7 @@
       📞 Call Us
     </a>
     <a href="https://wa.me/PHONE_NUMBER_HERE?text=Hi!%20I'd%20like%20to%20book%20a%20decoration."
-       class="mobile-bottom-bar__btn mobile-bottom-bar__btn--wa"
-       target="_blank" rel="noopener">
+      class="mobile-bottom-bar__btn mobile-bottom-bar__btn--wa" target="_blank" rel="noopener">
       💬 WhatsApp
     </a>
   </div>
@@ -1458,4 +1544,5 @@
   <script src="js/main.js"></script>
 
 </body>
+
 </html>
