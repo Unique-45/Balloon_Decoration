@@ -78,48 +78,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Critical Above-the-Fold CSS (inlined for performance) -->
-  <style>
-    /* Page Loader */
-    .page-loader {
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-      transition: opacity .5s ease, visibility .5s ease
-    }
-
-    .page-loader.hidden {
-      opacity: 0;
-      visibility: hidden
-    }
-
-    .page-loader__icon {
-      font-size: 3rem;
-      animation: loaderBounce 0.6s ease infinite alternate
-    }
-
-    .page-loader__text {
-      font-family: 'Poppins', sans-serif;
-      font-size: .9rem;
-      color: #666680;
-      margin-top: 12px
-    }
-
-    @keyframes loaderBounce {
-      0% {
-        transform: translateY(0)
-      }
-
-      100% {
-        transform: translateY(-12px)
-      }
-    }
-
-    /* Critical: Navbar + Hero (prevent layout shift) */
+  <style>/* Critical: Navbar + Hero (prevent layout shift) */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -162,12 +121,6 @@
 </head>
 
 <body>
-
-  <!-- Page Loader -->
-  <div class="page-loader" id="page-loader" aria-hidden="true">
-    <div class="page-loader__icon">🎈</div>
-    <div class="page-loader__text">Loading...</div>
-  </div>
 
   <!-- ============ NEW HEADER ============ -->
   <header class="header">
@@ -690,6 +643,9 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
       }
+      .new-categories-grid > .new-category-card:nth-child(n+7) {
+        display: none !important;
+      }
 
       .new-categories-title {
         font-size: 24px;
@@ -711,8 +667,13 @@
   <!-- ============ CATEGORY ICONS ============ -->
   <section id="category-icons" class="new-categories">
     <div class="container">
-      <h2 class="new-categories-title">Top Balloon Decoration Categories</h2>
-      <p class="new-categories-subtitle">Trusted Decorators for All Events</p>
+      <div class="new-categories-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <div style="text-align: left;">
+          <h2 class="new-categories-title" style="margin-bottom: 4px;">Top Balloon Decoration Categories</h2>
+          <p class="new-categories-subtitle" style="margin-bottom: 0;">Trusted Decorators for All Events</p>
+        </div>
+        <a href="#" style="color: #E91E8C; font-weight: 500; font-size: 14px; text-decoration: none; padding: 4px 12px; border-radius: 20px; background: #fff0f6;">View All</a>
+      </div>
 
       <div class="new-categories-grid">
         <a href="category-birthday.html" class="new-category-card">
